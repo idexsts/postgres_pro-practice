@@ -1,0 +1,17 @@
+# Артефакты сборки
+*.o
+*.so
+*.bc
+
+# Результаты тестов
+results/
+regression.diffs
+regression.out
+
+# Временные файлы
+*.log
+*.tmp
+
+# Файлы IDE
+.vscode/
+*.swp
