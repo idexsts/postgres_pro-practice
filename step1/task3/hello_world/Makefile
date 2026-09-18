@@ -1,7 +1,4 @@
-# Путь к pg_config из сборки PostgreSQL
-PG_CONFIG = /home/kitty/postgres/install/debug/bin/pg_config
-
-# Имя модуля (совпадает с именем .c файла)
+# Имя модуля (совпадает с именем .c файла без расширения)
 MODULES = hello_world
 
 # Имя расширения
@@ -12,8 +9,7 @@ DATA = hello_world--1.0.sql
 
 REGRESS = hello_world_test
 
-# Подключение системы сборки расширений PostgreSQL (PGXS)
+# Подключаем систему сборки расширений PostgreSQL (PGXS)
+PG_CONFIG = pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
-
-
